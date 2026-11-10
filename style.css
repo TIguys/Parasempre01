@@ -1,0 +1,187 @@
+/* ============================================================
+   PROJETO PARA SEMPRE — ESTILOS CUSTOMIZADOS E TEMAS
+   ============================================================ */
+
+:root {
+  /* Fontes */
+  --font-title: 'Playfair Display', Georgia, serif;
+  --font-body: 'Montserrat', 'Poppins', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+
+  /* Tema padrão (neutro/login) */
+  --bg-primary: #051427;
+  --bg-secondary: #0d1c2f;
+  --bg-card: rgba(18, 32, 51, 0.75);
+  --bg-card-border: rgba(164, 201, 255, 0.15);
+  --accent-color: #a4c9ff;
+  --accent-hover: #4d93e5;
+  --text-main: #f4f7fb;
+  --text-muted: #a8b8cc;
+}
+
+/* Tema Gustavo (Darling) — Azul-escuro */
+body[data-theme="gustavo"] {
+  --bg-primary: #071629;
+  --bg-secondary: #0D223D;
+  --bg-card: rgba(13, 34, 61, 0.85);
+  --bg-card-border: rgba(74, 144, 226, 0.25);
+  --accent-color: #4A90E2;
+  --accent-hover: #6ba4ea;
+  --text-main: #F4F7FB;
+  --text-muted: #A8B8CC;
+  --badge-bg: rgba(74, 144, 226, 0.15);
+  --badge-text: #8dbbf5;
+}
+
+/* Tema Dudinha — Vermelho-escuro Romântico */
+body[data-theme="dudinha"] {
+  --bg-primary: #26090E;
+  --bg-secondary: #3A1019;
+  --bg-card: rgba(58, 16, 25, 0.85);
+  --bg-card-border: rgba(199, 71, 90, 0.3);
+  --accent-color: #C7475A;
+  --accent-hover: #d96274;
+  --text-main: #FFF5F5;
+  --text-muted: #D6B4BA;
+  --badge-bg: rgba(199, 71, 90, 0.2);
+  --badge-text: #ffb2b8;
+}
+
+#view-login {
+  background:
+    radial-gradient(ellipse at 18% 12%, rgba(35, 183, 218, 0.13), transparent 38%),
+    radial-gradient(ellipse at 85% 88%, rgba(255, 76, 48, 0.12), transparent 38%),
+    #05090d;
+}
+
+.login-glow-cyan {
+  background-color: rgba(31, 190, 224, 0.12);
+}
+
+.login-glow-orange {
+  background-color: rgba(255, 76, 48, 0.12);
+}
+
+#view-login .login-card {
+  background: rgba(9, 17, 23, 0.88);
+  border-color: rgba(66, 197, 219, 0.2);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55), 0 0 40px rgba(31, 190, 224, 0.06);
+}
+
+.login-logo {
+  border-color: rgba(66, 197, 219, 0.35);
+  box-shadow: 0 8px 24px rgba(31, 190, 224, 0.14);
+}
+
+#view-login .login-title {
+  background: linear-gradient(90deg, #40c6e4, #ff6347);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.login-subtitle,
+.login-label,
+.login-icon,
+.login-toggle {
+  color: #a7b6bd;
+}
+
+.login-input {
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
+.login-input:focus {
+  border-color: #31b9d8;
+  --tw-ring-color: rgba(49, 185, 216, 0.45);
+}
+
+.login-submit {
+  background-image: linear-gradient(100deg, #149ec5, #ef553d);
+  box-shadow: 0 8px 22px rgba(17, 151, 185, 0.2);
+}
+
+.login-submit:hover {
+  background-image: linear-gradient(100deg, #25b6db, #ff684d);
+  box-shadow: 0 10px 26px rgba(239, 85, 61, 0.22);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.font-editorial {
+  font-family: var(--font-title);
+}
+
+.font-romantic {
+  font-family: var(--font-script);
+}
+
+/* Cartões com vidro fosco elegante */
+.card-glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--bg-card-border);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+}
+
+.card-glass:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 14px 34px -8px rgba(0, 0, 0, 0.55);
+}
+
+/* Transições de animação de entrada */
+.fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efeito de papel para cartinhas */
+.letter-paper {
+  background: #fdfbf7;
+  color: #2b2320;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35), inset 0 0 40px rgba(220, 200, 180, 0.35);
+  border: 1px solid rgba(210, 190, 170, 0.5);
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    rgba(200, 180, 160, 0.2) 31px,
+    rgba(200, 180, 160, 0.2) 32px
+  );
+  line-height: 32px;
+}
+
+/* Modal lightbox */
+.modal-overlay {
+  background: rgba(4, 10, 20, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.15);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 9999px;
+}
